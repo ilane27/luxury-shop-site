@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /checkout
+Disallow: /order-success
+Disallow: /order-confirmation/
+
+Sitemap: https://luxuryshop76k.com/sitemap.xml
