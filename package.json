@@ -89,4 +89,8 @@
 "ajv": "6.12.6",
 "ajv-keywords": "3.5.2"
 },
+"resolutions": {
+"ajv": "6.12.6",
+"ajv-keywords": "3.5.2"
+},
 "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf0c9d9b7e9f1f3a8f3c2d0f2b7c8a9b0d1e2f3a4b5c6d7e8f9"
