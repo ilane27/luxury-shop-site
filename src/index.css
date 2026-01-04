@@ -1,0 +1,199 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/manrope/300.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #050505;
+    --foreground: #FAFAFA;
+    --card: #0A0A0A;
+    --card-foreground: #FAFAFA;
+    --popover: #0A0A0A;
+    --popover-foreground: #FAFAFA;
+    --primary: #D4AF37;
+    --primary-foreground: #000000;
+    --secondary: #1A1A1A;
+    --secondary-foreground: #D4AF37;
+    --muted: #1A1A1A;
+    --muted-foreground: #888888;
+    --accent: #D4AF37;
+    --accent-foreground: #000000;
+    --destructive: #dc2626;
+    --destructive-foreground: #FAFAFA;
+    --border: rgba(212, 175, 55, 0.2);
+    --input: #1A1A1A;
+    --ring: #D4AF37;
+    --radius: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+}
+
+/* Gold text glow effect */
+.text-gold {
+    color: #D4AF37;
+}
+
+.text-gold-glow {
+    color: #D4AF37;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Gold border */
+.border-gold {
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+.border-gold-solid {
+    border-color: #D4AF37;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #D4AF37;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #C5A028;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #D4AF37;
+    color: #000000;
+}
+
+/* Cards */
+.card-luxury {
+    background-color: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card-luxury:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+/* Navigation glass effect */
+.nav-glass {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C5A028;
+}
+
+/* Form inputs */
+input, textarea, select {
+    background-color: #1A1A1A !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    color: #FAFAFA !important;
+    font-family: 'Manrope', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #D4AF37 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2) !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #666666 !important;
+}
+
+/* Selection */
+::selection {
+    background-color: #D4AF37;
+    color: #000000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #1A1A1A 25%, #2A2A2A 50%, #1A1A1A 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Tailwind layers */
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
